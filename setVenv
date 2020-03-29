@@ -1,0 +1,4 @@
+TO ACTIVATE:
+	source project_venv/bin/activate
+TO DEACTIVATE:
+	deactivate 
