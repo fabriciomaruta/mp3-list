@@ -1,0 +1,13 @@
+from flask import Flask
+from flask_restful import Resource, Api
+import youtube_dl
+
+class Downloader(Resource):
+    def get(self):
+        download_video('https://www.youtube.com/watch?v=1YhR5UfaAzM')
+        return {'howdy':'how'}
+        
+def download_video(video_url):
+    ydl_opts = {}
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([video_url])
